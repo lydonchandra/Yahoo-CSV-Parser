@@ -1,0 +1,21 @@
+This is just a small library to parse stock prices retrieved from yahoo.com.
+
+2 API entry to parse: 
+1. a file
+    public List<Ohlcv> parseCsv(File file)
+2. a Reader object
+    public List<Ohlcv> parseCsvReader(Reader urlReader)
+
+It is inspired by activequant project.
+
+Example:
+
+Retrieve GLD price for 1st and 2nd January 2010
+
+YAHOO URL:
+http://table.finance.yahoo.com/table.csv?s=GLD&a=1&b=1&c=2010&d=1&e=2&f=2010&ignore=.csv&g=d
+
+Result:
+Date,Open,High,Low,Close,Volume,Adj Close
+2010-02-02,109.16,109.60,108.61,109.13,14292200,109.13
+2010-02-01,106.64,108.48,106.37,108.35,14901900,108.35
